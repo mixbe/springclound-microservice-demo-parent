@@ -1,6 +1,6 @@
 package cn.demo.storage.mapper;
 
-import cn.demo.storage.feigapi.entity.StorageEntity;
+import cn.demo.storage.entity.StorageEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

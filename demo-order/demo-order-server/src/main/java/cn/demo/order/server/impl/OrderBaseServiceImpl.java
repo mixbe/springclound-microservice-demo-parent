@@ -3,19 +3,19 @@ package cn.demo.order.server.impl;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
 import cn.demo.common.model.pojo.ResponseResult;
-import cn.demo.order.feign.api.entity.OrderBaseEntity;
+import cn.demo.order.entity.OrderBaseEntity;
+import cn.demo.order.feign.api.dto.OrderDTO;
 import cn.demo.order.mapper.OrderBaseMapper;
-import cn.demo.order.feign.api.request.OrderReq;
 import cn.demo.order.server.OrderBaseService;
 import cn.demo.storage.feigapi.api.StorageApi;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
-
-import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Service;
 
 /**
  * <p>
@@ -34,7 +34,7 @@ public class OrderBaseServiceImpl extends ServiceImpl<OrderBaseMapper, OrderBase
 
   @GlobalTransactional(timeoutMills = 300000, name = "prex-create-order")
   @Override
-  public void createOrder(OrderReq order) throws Exception {
+  public void createOrder(OrderDTO order) throws Exception {
 
     log.info("全局事务，XID = " + RootContext.getXID());
 

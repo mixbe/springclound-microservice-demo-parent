@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.demo.common.model.pojo.ResponseResult;
-import cn.demo.order.feign.api.request.OrderReq;
+import cn.demo.order.feign.api.dto.OrderDTO;
 import cn.demo.order.server.OrderBaseService;
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,7 +30,7 @@ public class OrderController {
    * 创建订单
    */
   @PostMapping("/create")
-  public ResponseResult create(@RequestBody OrderReq order) {
+  public ResponseResult create(@RequestBody OrderDTO order) {
 
     try {
       orderBaseService.createOrder(order);

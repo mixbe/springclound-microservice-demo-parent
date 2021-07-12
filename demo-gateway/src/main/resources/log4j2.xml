@@ -4,9 +4,7 @@
     <property name="LOG_HOME">/usr/local/var/log/gateway</property>
     <property name="ERROR_LOG_FILE_NAME">error</property>
     <property name="APP_LOG_FILE_NAME">app</property>
-    <property name="PATTERN_LAYOUT">%-d{yyyy-MM-dd HH:mm:ss.SSS} {%pid} %-5p %-3T [%traceId] (%F:%L)
-      - %m%n
-    </property>
+    <property name="PATTERN_LAYOUT">%-d{yyyy-MM-dd HH:mm:ss.SSS} {%pid} %-5p %-3T [%traceId] (%F:%L) - %m%n</property>
   </properties>
   <Appenders>
     <Console name="Console" target="SYSTEM_OUT">

@@ -1,7 +1,7 @@
 package cn.demo.order.server;
 
-import cn.demo.order.feign.api.entity.OrderBaseEntity;
-import cn.demo.order.feign.api.request.OrderReq;
+import cn.demo.order.entity.OrderBaseEntity;
+import cn.demo.order.feign.api.dto.OrderDTO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -14,6 +14,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface OrderBaseService extends IService<OrderBaseEntity> {
 
-  void createOrder(OrderReq order) throws Exception;
+  void createOrder(OrderDTO order) throws Exception;
 
 }

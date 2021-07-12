@@ -6,7 +6,7 @@ import java.util.Objects;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import cn.demo.storage.feigapi.entity.StorageEntity;
+import cn.demo.storage.entity.StorageEntity;
 import cn.demo.storage.mapper.StorageMapper;
 import cn.demo.storage.service.StorageService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;

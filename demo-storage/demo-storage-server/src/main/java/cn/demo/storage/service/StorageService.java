@@ -1,6 +1,6 @@
 package cn.demo.storage.service;
 
-import cn.demo.storage.feigapi.entity.StorageEntity;
+import cn.demo.storage.entity.StorageEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
